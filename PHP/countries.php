@@ -13,15 +13,14 @@
  <!DOCTYPE html>  
  <html>  
       <head>  
-           <title>Webslesson Tutorial | Insert and Display Images From Mysql Database in PHP</title>  
+           <title>SportsDB</title>  
            <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>  
            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />  
            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>  
       </head>  
       <body>  
            <br /><br />  
-           <div class="container" style="width:500px;">  
-                <h3 align="center">Insert and Display Images From Mysql Database in PHP</h3>  
+           <div class="container" style="width:500px;">    
                 <br />  
                 <form method="post" enctype="multipart/form-data">  
                      <input type="file" name="image" id="image" />  
@@ -40,7 +39,7 @@
                      echo '  
                            
                                 <th>
-                                    <a href="action.php?item_id=CB'.$row["country_id"].'">
+                                    <a href="players.php?item_id=CB'.$row["country_id"].'">
                                         <img src="data:image/jpeg;base64,'.base64_encode($row['img'] ).'" height="200" width="300" class="img-thumnail" />
                                     </a>
                                 </th>   

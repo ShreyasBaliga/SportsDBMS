@@ -107,7 +107,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             <span class="help-block"><?php echo $sex_err;?></span>
                         </div>
                         <input type="submit" class="btn btn-primary" value="Submit">
-                        <a href="newindex.php" class="btn btn-default">Cancel</a>
+                        <a href="countries.php" class="btn btn-default">Cancel</a>
                     </form>
                 </div>
             </div>        
