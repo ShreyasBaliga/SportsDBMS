@@ -1,19 +1,18 @@
 CREATE TABLE COUNTRIES(
-    country_id VARCHAR(5) PRIMARY KEY,
-    country_name VARCHAR(20) NOT NULL,
-    image_url VARCHAR(100) NOT NULL
+    country_id INT(5) PRIMARY KEY AUTO_INCREMENT,
+    img BLOB NOT NULL
 );
 
 CREATE TABLE SPORTS(
-    sport_id VARCHAR(5) PRIMARY KEY,
+    sport_id INT(5) PRIMARY KEY,
     sport_name VARCHAR(20) NOT NULL
 );
 
 CREATE TABLE CLUBS(
     club_id VARCHAR(5) PRIMARY KEY,
     club_name VARCHAR(20) NOT NULL,
-    country_id INT REFERENCES COUNTRIES ON DELETE CASCADE,
-    sport_id VARCHAR(5) REFERENCES SPORTS ON DELETE CASCADE
+    country_id INT REFERENCES COUNTRIES(country_id) ON DELETE CASCADE,
+    sport_id INT REFERENCES SPORTS(sport_id) ON DELETE CASCADE
 );
 
 CREATE TABLE PLAYER(
@@ -38,8 +37,8 @@ CREATE TABLE STATS(
 INSERT INTO COUNTRIES VALUES("C1","India","https://upload.wikimedia.org/wikipedia/en/thumb/4/41/Flag_of_India.svg/383px-Flag_of_India.svg.png");
 INSERT INTO COUNTRIES VALUES("C2","England","https://upload.wikimedia.org/wikipedia/en/thumb/b/be/Flag_of_England.svg/1280px-Flag_of_England.svg.png");
 
-INSERT INTO SPORTS VALUES("S1","Cricket");
-INSERT INTO SPORTS VALUES("S2","Football");
+INSERT INTO SPORTS VALUES(1,"Cricket");
+INSERT INTO SPORTS VALUES(2,"Football");
 
 INSERT INTO CLUBS VALUES("CB1","Arsenal FC",C2,S2);
 INSERT INTO CLUBS VALUES("CB2","Chennai Super Kings",C1,S1);
