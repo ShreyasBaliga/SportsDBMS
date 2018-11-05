@@ -11,20 +11,25 @@ CREATE TABLE SPORTS(
 CREATE TABLE CLUBS(
     club_id VARCHAR(5) PRIMARY KEY,
     club_name VARCHAR(20) NOT NULL,
-    country_id INT REFERENCES COUNTRIES(country_id) ON DELETE CASCADE,
-    sport_id INT REFERENCES SPORTS(sport_id) ON DELETE CASCADE
+    pass VARCHAR(20),
+    country_id INT,
+    sport_id INT,
+    FOREIGN KEY(country_id) REFERENCES COUNTRIES(country_id) ON DELETE CASCADE,
+    FOREIGN KEY(sport_id) REFERENCES SPORTS(sport_id) ON DELETE CASCADE
 );
 
 CREATE TABLE PLAYER(
-    player_id VARCHAR(5) PRIMARY KEY,
+    player_id INT(5) PRIMARY KEY AUTO_INCREMENT,
     player_name VARCHAR(20) NOT NULL,
     player_age INT NOT NULL,
     player_sex VARCHAR(2) NOT NULL,
-    club_id VARCHAR(5) REFERENCES CLUBS ON DELETE CASCADE
+    club_id VARCHAR(5),
+    FOREIGN KEY(club_id) REFERENCES CLUBS(club_id) ON DELETE CASCADE
 );
 
 CREATE TABLE STATS(
-    player_id VARCHAR(5) REFERENCES PLAYER ON DELETE CASCADE,
+    player_id INT(5),
+    FOREIGN KEY(player_id) REFERENCES PLAYER(player_id) ON DELETE CASCADE,
     no_of_matches INT NOT NULL,
     injured VARCHAR(10) NOT NULL,
     man_of_match INT NOT NULL,
@@ -34,16 +39,14 @@ CREATE TABLE STATS(
     position VARCHAR(20) NOT NULL
 );
 
-INSERT INTO COUNTRIES VALUES("C1","India","https://upload.wikimedia.org/wikipedia/en/thumb/4/41/Flag_of_India.svg/383px-Flag_of_India.svg.png");
-INSERT INTO COUNTRIES VALUES("C2","England","https://upload.wikimedia.org/wikipedia/en/thumb/b/be/Flag_of_England.svg/1280px-Flag_of_England.svg.png");
 
 INSERT INTO SPORTS VALUES(1,"Cricket");
 INSERT INTO SPORTS VALUES(2,"Football");
 
-INSERT INTO CLUBS VALUES("CB1","Arsenal FC",C2,S2);
-INSERT INTO CLUBS VALUES("CB2","Chennai Super Kings",C1,S1);
-INSERT INTO CLUBS VALUES("CB3","Bengaluru FC",C1,S2);
-INSERT INTO CLUBS VALUES("CB4","Henley Cricket Club",C2,S1);
+INSERT INTO CLUBS VALUES("CB1","Arsenal FC","arsenal",2,2);
+INSERT INTO CLUBS VALUES("CB2","Chennai Super Kings","chennai",1,1);
+INSERT INTO CLUBS VALUES("CB3","Bengaluru FC","bengaluru",1,2);
+INSERT INTO CLUBS VALUES("CB4","Henley Cricket Club","henley",2,1);
 
 INSERT INTO PLAYER VALUES("P1","MS Dhoni",30,"M",CB2);
 INSERT INTO PLAYER VALUES("P2","Melwin",25,"M",CB2);
