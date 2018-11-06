@@ -1,4 +1,6 @@
 CREATE TABLE COUNTRIES(
+    sport_id INT,
+    FOREIGN KEY(country_id) REFERENCES COUNTRIES(country_id) ON DELETE CASCADE,
     country_id INT(5) PRIMARY KEY AUTO_INCREMENT,
     img BLOB NOT NULL
 );
