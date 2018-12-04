@@ -49,7 +49,7 @@ echo ('
 
         <tr>
             <td>Last match played</td>
-            <td><input type="text" name="last_match_played" value='.$row["last_match_played"].' style ="background-color:Transparent;border:none;color:white;"></td>
+            <td><input type="text" name="last_score_updated" value='.$row["last_match_played"].' style ="background-color:Transparent;border:none;color:white;"></td>
         </tr>
 
 
@@ -93,7 +93,7 @@ else{
     </tr>
 
     <tr>
-        <td>Last match played</td>
+        <td>Last Score Updated</td>
         <td>'.$row["last_match_played"].'</td>
     </tr>
 
