@@ -15,15 +15,15 @@ $player_id = $_POST['player_id'];
 $no_of_matches = $_POST['no_of_matches'];
 $injured = $_POST['injured'];
 $man_of_match = $_POST['man_of_match'];
-$last_match_played = $_POST['last_match_played'];
+$last_score_updated = $_POST['last_score_updated'];
 $worth = $_POST['worth'];
 $goals_runs = $_POST['goals_runs'];
 $position = $_POST['position'];
 
 
 
-$sql_statement = $conn->prepare("UPDATE stats SET  no_of_matches=?, injured=?, man_of_match=?, last_match_played=?,worth=?,goals_runs=?,position=? WHERE player_id=?");
-$sql_statement->bind_param("ssssssss",$no_of_matches, $injured, $man_of_match,$last_match_played,$worth,$goals_runs,$position ,$player_id);
+$sql_statement = $conn->prepare("UPDATE stats SET  no_of_matches=?, injured=?, man_of_match=?, last_score_updated=?,worth=?,goals_runs=?,position=? WHERE player_id=?");
+$sql_statement->bind_param("ssssssss",$no_of_matches, $injured, $man_of_match,$last_score_updated,$worth,$goals_runs,$position ,$player_id);
 
 if ($sql_statement->execute()) {
 
