@@ -24,7 +24,7 @@
       <input type="text" placeholder="Number of matches" name="no_of_matches"/>
       <input type="text" placeholder="Injured" name="injured"/>
       <input type="text" placeholder="Times man of match" name="man_of_match"/>
-      <input type="text" placeholder="Last match played" name="last_match_played"/>
+      <input type="text" placeholder="Last score updated" name="last_score_updated"/>
       <input type="text" placeholder="Score" name="goals_runs"/>
       <input type="text" placeholder="Position" name="position"/>
       <input type="text" placeholder="Player Worth" name="worth"/>

@@ -20,7 +20,7 @@ if(isset($_POST['player_id']) && isset($_POST['player_name'])){
         $no_of_matches = $_POST['no_of_matches'];
         $injured = $_POST['injured'];
         $man_of_match = $_POST['man_of_match'];
-        $last_match_played = $_POST['last_match_played'];
+        $last_score_updated = $_POST['last_score_updated'];
         $worth = $_POST['worth'];
         $goals_runs = $_POST['goals_runs'];
         $position = $_POST['position'];
@@ -31,9 +31,9 @@ if(isset($_POST['player_id']) && isset($_POST['player_name'])){
         
 
          	
-        $sql_statement_2 = $conn->prepare("INSERT INTO stats(player_id, no_of_matches, injured, man_of_match, last_match_played,worth,goals_runs,position) VALUES(?, ?, ?, ?, ?, ?, ?, ?)");
-        $sql_statement_2->bind_param("ssssssss", $player_id, $no_of_matches, $injured, $man_of_match,$last_match_played,$worth,$goals_runs,$position);
-        
+        $sql_statement_2 = $conn->prepare("INSERT INTO stats(player_id, no_of_matches, injured, man_of_match, last_score_updated,worth,goals_runs,position) VALUES(?, ?, ?, ?, ?, ?, ?, ?)");
+        $sql_statement_2->bind_param("ssssssss", $player_id, $no_of_matches, $injured, $man_of_match,$last_score_updated,$worth,$goals_runs,$position);
+           
         if ($sql_statement_1->execute() && $sql_statement_2->execute()) {
 
             $sql_statement_1->close();
