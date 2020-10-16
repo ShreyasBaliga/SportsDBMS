@@ -46,5 +46,4 @@ if(isset($_POST['club_id']) && isset($_POST['clubPassword'])){
         $response["error_msg"] = "Required parameters email or password is missing!";
         echo json_encode($response);
 }
-
 ?> 

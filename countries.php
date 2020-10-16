@@ -20,7 +20,7 @@
            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />  
            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>  
       </head>  
-      <body background="css/countries.png">  
+      <body background="CSS/countries.png">  
            <br /><br />  
            <div class="container"  style="width:800px;">    
                 <br />

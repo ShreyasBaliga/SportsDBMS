@@ -11,14 +11,14 @@
 
 <div class="login-page">
   <div class="form">
-    <form class="register-form" action="php/register.php" method="POST" enctype="multipart/form-data">
+    <form class="register-form" action="CRUD/register.php" method="POST">
       <input type="text" placeholder="Club ID" name="club_id"/>
       <input type="text" placeholder="Club Name" name="club_name"/>
       <input type="text" placeholder="Country" name="country_name"/>
       <input type="text" placeholder="Sport" name="sport_name"/>
-      <input type="file" name="image_url" id="image_url"/>
+      <input type="file" name="image_url"/>
       <input type="password" placeholder="Password" name="clubPassword"/>
-      <input type="submit" name="insert" id="insert" value="Insert" class="btn btn-info"/>
+      <button>create</button>
       <p class="message">Already registered? <a href="#">Sign In</a></p>
     </form>
     <form class="login-form" action="login_validate.php" method="POST">
@@ -30,8 +30,7 @@
   </div>
 </div>
 
-<!--<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>-->
-<script src='js/jquery.js'></script>
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 <script>
 $('.message').click(function(){
    $('form').animate({height: "toggle", opacity: "toggle"}, "slow");

@@ -4,8 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <title>Countries</title>
-     <link rel="stylesheet" href="css/table_style.css">
-     <link rel="stylesheet" href="css/sports.css" /> 
+     <link rel="stylesheet" href="CSS/table_style.css">
+     <link rel="stylesheet" href="CSS/sports.css" /> 
 </head>
 
 <body>
