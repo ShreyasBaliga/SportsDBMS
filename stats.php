@@ -23,8 +23,8 @@ $row = $result->fetch_assoc();
 echo('<head>
 <meta charset="UTF-8">
 <title>Players</title>
-   <link rel="stylesheet" href="css/table_style.css">
-   <link rel="stylesheet" href="css/sports.css" /> 
+   <link rel="stylesheet" href="CSS/table_style.css">
+   <link rel="stylesheet" href="CSS/sports.css" /> 
    <h1 align="center">'.$row["player_name"].'</h1>
 </head>
 
@@ -39,7 +39,7 @@ if($_POST['loggedIn']==1){
 echo ('
     <table class="container">
     <tbody>
-    <form name="deletePlayer" action="php/updatePlayer.php" method="POST">
+    <form name="updatePlayer" action="CRUD/updatePlayer.php" method="POST">
         <div><button name="submit" type="submit" class="xop-button">Update</button></div>
         <input type="hidden" name="player_id" value='.$row["player_id"].'>
         <tr>

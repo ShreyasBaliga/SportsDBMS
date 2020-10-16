@@ -24,8 +24,8 @@ $row = $result->fetch_assoc();
 echo('<head>
 <meta charset="UTF-8">
 <title>Players</title>
-   <link rel="stylesheet" href="css/table_style.css">
-   <link rel="stylesheet" href="css/sports.css" /> 
+   <link rel="stylesheet" href="CSS/table_style.css">
+   <link rel="stylesheet" href="CSS/sports.css" /> 
    <img src="data:image/png;base64,'.base64_encode($row["image_url"]).'" height=100 width=100 class="center"/>
 </head>
 
@@ -56,7 +56,7 @@ while($row = $result->fetch_assoc()) {
     </td>');
         if($_POST['loggedIn']==1){
         echo('<td>               
-                <form name="deletePlayer" action="php/deletePlayer.php" method="POST">
+                <form name="deletePlayer" action="CRUD/deletePlayer.php" method="POST">
                         <input type="hidden" name="player_id" value='.$row["player_id"].'>
                         <input type="hidden" name="club_id" value='.$row["club_id"].'>
                         <input type="hidden" name="loggedIn" value='.$_POST['loggedIn'].'>

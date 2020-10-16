@@ -2,7 +2,7 @@
  <html>  
       <head>  
            <title>SportsDB</title>  
-           <link rel="stylesheet" href="css/sports.css" />   
+           <link rel="stylesheet" href="CSS/sports.css" />   
       </head>  
       <body style="background-color: #A9A9A9;">  
             <!-- https://xopixel.com/responsive-split-screen-layout-css3/ -->
